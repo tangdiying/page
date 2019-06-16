@@ -5,12 +5,15 @@ import { Page1RoutingModule } from './page1-routing.module';
 import { Page1Component } from './page1.component';
 import { Demo1Component } from './demo1/demo1.component';
 import { DatascrollDirective } from './datascroll.directive';
+import { HttpClientModule } from '@angular/common/http';
+import { Demo2Component } from './demo2/demo2.component';
 
 @NgModule({
-  declarations: [Page1Component, Demo1Component, DatascrollDirective],
+  declarations: [Page1Component, Demo1Component, DatascrollDirective, Demo2Component],
   imports: [
     CommonModule,
-    Page1RoutingModule
+    Page1RoutingModule,
+    HttpClientModule
   ],
   exports:[
     Page1Component

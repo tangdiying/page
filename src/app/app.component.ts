@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'page';
+  listheight = 600;
+  listitemheight = 30
 }
