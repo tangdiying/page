@@ -1,11 +1,21 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <app-flex></app-flex> -->
-<!-- <router-outlet></router-outlet> -->
-<!-- <app-subject></app-subject> -->
-<!-- <app-page2></app-page2> -->
-<!-- <a [routerLink]="'demo1'">demo1</a>
-<a [routerLink]="'demo2'">demo2</a>
-<router-outlet></router-outlet> -->
-<!-- <app-page2 [listheight]="listheight" [listitemheight]="listitemheight"></app-page2> -->
-<!-- <app-page3 [listheight]="listheight" [listitemheight]="listitemheight"></app-page3> -->
-<app-demo1 [musicName]="musicName"></app-demo1>
+  
+  <div class="box">
+    <div class="box-top"></div>
+    <div class="box-body">
+      <div class="box-body-left"></div>
+      <div class="box-body-right">
+          <app-page
+          (afterReachBottom)="getData($event)"
+          [(isGetData)]="isGetData"
+          >
+          <div>
+              <div *ngFor="let item of items;let i = index" class="item">{{item['id']}}---{{item['name']}}</div>
+          </div>
+          </app-page>
+      </div>
+    </div>
+  </div>
+ <!-- <ng-template #load>
+    <nz-spin nzSimple></nz-spin>
+ </ng-template> -->
+ 

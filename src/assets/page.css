@@ -1,0 +1,20 @@
+.box-top{
+  width: 800px;
+  height: 100px;
+  background-color: lightblue;
+}
+.box-body{
+  display: flex;
+  height: 300px;
+  overflow: scroll;
+}
+.box-body .box-body-left{
+  width: 100px;
+  height: 100px;
+  background-color: lightcoral;
+}
+.box-body .box-body-right{
+  width: 300px;
+  height: 200px;
+  background-color: #f5f5f5;
+}

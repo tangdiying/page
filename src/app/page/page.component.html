@@ -1,0 +1,17 @@
+<div class="pageContainer" #pageContainer [ngStyle]="{'height': wrapHeight+'px'}">
+  <div class="loadmore" [ngStyle]="{'padding-top':this.reachToppadding+'px'}">
+    <div class="topLoading" *ngIf="isTopLoading">
+      <ng-container *ngIf="flag;else loadTemplate">
+          <nz-spin nzSimple></nz-spin>
+      </ng-container>
+    </div>
+  </div>
+  <ng-content></ng-content>
+  <div class="loadmore" [ngStyle]="{'padding-bottom': this.reachBottompadding+'px'}">
+    <div class="bottomLoading" *ngIf="isBottomLoading">
+      <ng-container *ngIf="flag;else loadTemplate">
+          <nz-spin nzSimple></nz-spin>
+      </ng-container>
+    </div>
+  </div>
+</div>
