@@ -47,6 +47,8 @@ export class PageComponent implements OnInit,OnDestroy,OnChanges {
     let  dom = this.checkScrollBar(this.handleClass);
     this.scrollEvent = fromEvent(dom,"scroll")
     .subscribe(e=>{
+      this.reachBottom = false;
+      this.reachTop = false;
       if(e["srcElement"]['scrollTop']+e["srcElement"]['clientHeight']+10>e["srcElement"]['scrollHeight']){
         this.reachBottom = true
       }
