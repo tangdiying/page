@@ -1,4 +1,4 @@
-<div class="pageContainer" #pageContainer [ngStyle]="{'height': wrapHeight+'px'}">
+<div class="pageContainer" #pageContainer>
   <div class="loadmore" [ngStyle]="{'padding-top':this.reachToppadding+'px'}">
     <div class="topLoading" *ngIf="isTopLoading">
       <ng-container *ngIf="flag;else loadTemplate">

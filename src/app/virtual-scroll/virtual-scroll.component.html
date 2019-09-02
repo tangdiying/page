@@ -1,0 +1,37 @@
+<!-- <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+  <div *cdkVirtualFor="let item of items" class="example-item">{{item.id}}</div>
+</cdk-virtual-scroll-viewport> -->
+<div class="pageContainer" #pageContainer>
+  <div class="loadmore" [ngStyle]="{'padding-top':this.reachToppadding+'px'}">
+    <div class="topLoading" *ngIf="isTopLoading">
+      <ng-container *ngIf="flag;else loadTemplate">
+          <nz-spin nzSimple></nz-spin>
+      </ng-container>
+    </div>
+  </div>
+  <ng-content></ng-content>
+  <div class="loadmore" [ngStyle]="{'padding-bottom': this.reachBottompadding+'px'}">
+    <div class="bottomLoading" *ngIf="isBottomLoading">
+      <ng-container *ngIf="flag;else loadTemplate">
+          <nz-spin nzSimple></nz-spin>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<!-- <div class="pageContainer" #pageContainer>
+  <div class="loadmore" [ngStyle]="{'padding-top':this.reachToppadding+'px'}">
+    <div class="topLoading" *ngIf="isTopLoading">
+      <ng-container *ngIf="flag;else loadTemplate">
+          <nz-spin nzSimple></nz-spin>
+      </ng-container>
+    </div>
+  </div>
+  <ng-content></ng-content>
+  <div class="loadmore" [ngStyle]="{'padding-bottom': this.reachBottompadding+'px'}">
+    <div class="bottomLoading" *ngIf="isBottomLoading">
+      <ng-container *ngIf="flag;else loadTemplate">
+          <nz-spin nzSimple></nz-spin>
+      </ng-container>
+    </div>
+  </div>
+</div> -->

@@ -12,6 +12,6 @@ export class ServiceService {
       page:page,
       limit:limit
     }
-    return this.http.get("http://192.168.199.215:5000/getdata",{params:obj})
+    return this.http.get("http://192.168.50.51:5000/getdata",{params:obj})
   }
 }

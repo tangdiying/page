@@ -6,7 +6,6 @@
 .box-body{
   display: flex;
   height: 300px;
-  overflow: scroll;
 }
 .box-body .box-body-left{
   width: 100px;
